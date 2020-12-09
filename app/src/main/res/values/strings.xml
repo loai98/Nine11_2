@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Nine11</string>
+    <string name="tag_line">911</string>
+
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">انشاء الحساب</string>
+    <string name="forget_pass">هل نسيت كلمة المرور؟</string>
+    <string name="createAcc">إنشاء حساب</string>
+</resources>
