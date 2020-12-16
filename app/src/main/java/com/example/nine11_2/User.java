@@ -11,6 +11,11 @@ public class User {
         this.password = password;
     }
 
+    public User(String phoneNumber, String fullName) {
+        this.phoneNumber = phoneNumber;
+        this.fullName = fullName;
+    }
+
     public User() {}
 
     public String getSSN() {

@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 public class Sign_in extends AppCompatActivity {
 
     DatabaseReference database;
@@ -72,6 +74,8 @@ public class Sign_in extends AppCompatActivity {
     }
 
     private void SignIn() {
+
+
         final ProgressDialog progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Waiting");
         progressDialog.show();
@@ -83,10 +87,13 @@ public class Sign_in extends AppCompatActivity {
                 if(snapshot.child(SSN).exists()){
                     User user= snapshot.child(SSN).getValue(User.class);
 
-                    if(user.getPassword().equals(passsword))
+                    if(user.getPassword().equalsIgnoreCase(passsword))
                     {
-                        Toast.makeText(Sign_in.this, "Log in succesfull", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(Sign_in.this, "To "+user.getFullName()+"Activity", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Sign_in.this, "Log in succesfull", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Sign_in.this, "To "+user.getFullName()+"Activity", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(Sign_in.this, Dashboard.class);
+                        startActivity(intent);
+                        finish();
                     }else{
                         Toast.makeText(Sign_in.this, "كلمة السر غير صحيحة", Toast.LENGTH_SHORT).show();
                         return;
