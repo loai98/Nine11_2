@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">Nine11</string>
     <string name="tag_line">911</string>
-
+    <!--sign in/up-->
     <string name="login">تسجيل الدخول</string>
     <string name="register">انشاء الحساب</string>
     <string name="forget_pass">هل نسيت كلمة المرور؟</string>
     <string name="createAcc">إنشاء حساب</string>
-
 
     <!--    dash-->
     <string name="hello_user">اهلا بك</string>
@@ -16,35 +15,9 @@
     <string name="listReport">سجل البلاغات </string>
     <string name="saftyList">إرشادات السلامة  </string>
 
-    <!--    neWreport-->
+<!--    neWreport-->
+
     <string name="titleReport">تفاصيل البلاغ </string>
     <string name="submitReport">إرسال البلاغ </string>
-    <string-array name="spinner_type_item">
-        <item>-اختر القسم-</item>
-        <item>الدفاع المدني</item>
-        <item>قوات الدرك</item>
-        <item>شركات الاتصالات</item>
-        <item>شركة الكهرباء الاردنية</item>
-        <item>شركة مياه الاردن مياهنا</item>
-        <item>امانة عمان الكبرى</item>
-        <item>وزارة البلديات</item>
-        <item>وزارة الاشغال</item>
-    </string-array>
 
-    <string-array name="spinner_city_item">
-        <item>-اختر المحافظة-</item>
-        <item>اربد</item>
-        <item>جرش</item>
-        <item>عجلون</item>
-        <item>المفرق</item>
-        <item>عمان</item>
-        <item>الزرقاء</item>
-        <item>البلقاء</item>
-        <item>الطفيلة</item>
-        <item>الكرك</item>
-        <item>مادبا</item>
-        <item>معان</item>
-        <item>العقبة</item>
-    </string-array>
-    <string name="title_activity_select_location">Map</string>
 </resources>
