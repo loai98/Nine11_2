@@ -20,15 +20,4 @@
     <string name="titleReport">تفاصيل البلاغ </string>
     <string name="submitReport">إرسال البلاغ </string>
 
-
-
-
-    <string-array name="spinner_city_item">
-
-    </string-array>
-
-    <string-array name="spinner_type_item">
-
-    </string-array>
-
 </resources>
