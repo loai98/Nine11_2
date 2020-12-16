@@ -177,7 +177,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="10dp"
             android:textSize="13sp"
             android:textColor="@color/colorSec"
