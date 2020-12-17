@@ -186,6 +186,7 @@ public class NewReport extends AppCompatActivity {
         Intent intent = new Intent(NewReport.this, SelectLocation.class);
         startActivityForResult(intent, LOCATION_REQUEST_CODE);
 
+
     }
 
     private void UploadImage() {
@@ -269,10 +270,16 @@ public class NewReport extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 progressDialog.dismiss();
                 if(task.isSuccessful()){
+                    databaseReference.child("User").child(User.SSN).child("Complaint").push().setValue(complaint);
                     Toast.makeText(NewReport.this, "تم ارسال البلاغ بنجاح", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             }
         });
+
+
+
+
 
     }
 }

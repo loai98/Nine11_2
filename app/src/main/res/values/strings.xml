@@ -15,20 +15,41 @@
     <string name="listReport">سجل البلاغات </string>
     <string name="saftyList">إرشادات السلامة  </string>
 
-<!--    neWreport-->
+    <!--    neWreport-->
 
     <string name="titleReport">تفاصيل البلاغ </string>
     <string name="submitReport">إرسال البلاغ </string>
 
 
-
-
     <string-array name="spinner_city_item">
-
+        <item>-المحافظة-</item>
+           <item>اربد</item>
+           <item>جرش</item>
+           <item>عجلون</item>
+           <item>المفرق</item>
+           <item>عمان</item>
+           <item>الزرقاء</item>
+           <item>البلقاء</item>
+           <item>مادبا</item>
+           <item>معان</item>
+           <item>الكرك</item>
+           <item>الطفيلة</item>
+           <item>العقبة</item>
     </string-array>
 
     <string-array name="spinner_type_item">
-
+        <item>-القسم-</item>
+        <item>المديرية العامة لدفاع المدني</item>
+        <item> المديرية العامة لقوات الدرك</item>
+        <item>وزارة الداخلية</item>
+        <item>شركات الاتصالات الخاصة</item>
+        <item>هيئة تنظيم قطاع الاتصالات</item>
+        <item>شركة الكهرباء الاردنية</item>
+        <item>شركة مياه الاردن مياهنا</item>
+        <item> امانة عمان الكبرى</item>
+        <item>وزارة البلديات</item>
+        <item>وزارة الاشغال</item>
     </string-array>
+    <string name="title_activity_select_location">Map</string>
 
 </resources>

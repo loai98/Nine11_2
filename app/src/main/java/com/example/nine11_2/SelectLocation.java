@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,7 +25,7 @@ public class SelectLocation extends FragmentActivity implements OnMapReadyCallba
 
     private GoogleMap mMap;
 
-    Button selectBtn;
+    Button nextBtn;
     ImageView pinDrop;
 
     @Override
@@ -38,30 +37,28 @@ public class SelectLocation extends FragmentActivity implements OnMapReadyCallba
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        selectBtn = findViewById(R.id.select_location_next);
+
+        nextBtn = findViewById(R.id.select_location_next);
         pinDrop = findViewById(R.id.select_location_pinDrop);
 
-
-        selectBtn.setOnClickListener(new View.OnClickListener() {
+        nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LatLng position = mMap.getProjection().fromScreenLocation(new Point(pinDrop.getLeft() + pinDrop.getWidth() / 2, pinDrop.getBottom()));
                 //  mMap.animateCamera(CameraUpdateFactory.);
                 //  Location cameraLocation = new Location(String.valueOf(mMap.getProjection()));
-                Toast.makeText(SelectLocation.this,  Double.toString(position.latitude), Toast.LENGTH_SHORT).show();
                 mMap.addMarker(new MarkerOptions().position(position));
-               // Address address= new Address(Double.toString(position.latitude) , Double.toString(position.longitude));
+              // Adress adress= new Adress(Double.toString(position.latitude) , Double.toString(position.longitude));
 
                 //Donate
                 Intent intent = new Intent();
-                intent.putExtra("latitude",  Double.toString(position.latitude));
+                intent.putExtra("latitude", Double.toString(position.latitude) );
                 intent.putExtra("longitude",  Double.toString(position.longitude));
                 setResult(RESULT_OK, intent);
                 finish();
             }
         });
     }
-
 
     /**
      * Manipulates the map once available.
@@ -81,10 +78,8 @@ public class SelectLocation extends FragmentActivity implements OnMapReadyCallba
         else
             ActivityCompat.requestPermissions(this , new String[]{Manifest.permission.ACCESS_FINE_LOCATION} , 100 );
 
-        // Add a marker in Sydney and move the camera
-    /*    LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
+
+
     }
 
     @Override
