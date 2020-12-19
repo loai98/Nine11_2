@@ -51,15 +51,14 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginEnd="176dp"
-            android:layout_marginRight="176dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_baseline_menu"
             app:layout_constraintBottom_toBottomOf="@id/text_hello_dash"
             app:layout_constraintEnd_toStartOf="@+id/nameUser"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_hello_dash"
             app:layout_constraintVertical_bias="0.625"
-            app:tint="@color/white">
-        </ImageView>
+            app:tint="@color/white"></ImageView>
         
         <LinearLayout
             android:layout_width="match_parent"

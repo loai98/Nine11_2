@@ -6,6 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewReport">
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/dashHeader"
         android:layout_width="match_parent"
@@ -22,7 +25,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="30dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_baseline_menu"
+            android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.82"
@@ -77,31 +80,43 @@
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/sign_in_back"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/dashHeader"
-        app:layout_constraintStart_toStartOf="@+id/dashHeader"
-        app:layout_constraintTop_toBottomOf="@+id/dashHeader">
+        app:layout_constraintTop_toBottomOf="@id/dashHeader"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="29dp">
 
-<!--        1-->
-        <TextView
-            android:id="@+id/nameDepartment"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:gravity="right"
-            android:text="القسم : *"
-            android:textColor="@color/colorFor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="40dp"/>
-      <!--  <EditText
+            android:layout_height="0dp"
+            android:background="@drawable/sign_in_back"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dashHeader"
+            app:layout_constraintStart_toStartOf="@+id/dashHeader"
+            app:layout_constraintTop_toBottomOf="@+id/dashHeader">
+
+            <!--        1-->
+            <TextView
+                android:id="@+id/nameDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="right"
+                android:text="القسم : *"
+                android:textColor="@color/colorFor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="40dp" />
+            <!--  <EditText
             android:id="@+id/inputNameReport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -123,183 +138,194 @@
             tools:ignore="Autofill"
             tools:layout_editor_absoluteX="40dp"/>  -->
 
-<!--        2-->
-        <TextView
-            android:id="@+id/typeReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:gravity="right"
-            android:text="نوع البلاغ : *"
-            android:textColor="@color/colorFor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameCity">
-        </TextView>
-         <Spinner
-            android:id="@+id/inputNameReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custome_input"
-            android:gravity="right"
-             android:paddingStart="60dp"
-            android:paddingLeft="60dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColorHint="@color/colorFor"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/nameDepartment"/>
-        <TextView
-            android:id="@+id/nameCity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="right"
-            android:text="المحافظة : *"
-            android:textColor="@color/colorFor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/inputNameReport"
-            tools:layout_editor_absoluteX="40dp"/>
-        <Spinner
-            android:id="@+id/inputNameCity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custome_input"
-            android:gravity="right"
-            android:paddingStart="60dp"
-            android:paddingLeft="60dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColorHint="@color/colorFor"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/nameCity"/>
-       <EditText
-            android:id="@+id/inputTypeReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custome_input"
-            android:gravity="right"
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            android:paddingStart="60dp"
-            android:paddingLeft="60dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColorHint="@color/colorFor"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/typeReport"
-            tools:ignore="Autofill"
-            tools:layout_editor_absoluteX="40dp"/>
-<!--        3-->
-        <TextView
-            android:id="@+id/descReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="60dp"
-            android:gravity="right"
-            android:text="وصف البلاغ :"
-            android:textColor="@color/colorFor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="@+id/inputTypeReport">
-        </TextView>
-        <EditText
-            android:id="@+id/inputDescReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custome_input"
-            android:gravity="right"
-            android:hint="اوصف الحدث "
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            android:paddingStart="60dp"
-            android:paddingLeft="60dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="60dp"
-            android:textColorHint="@color/colorFor"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/descReport"
-            tools:ignore="Autofill"
-            tools:layout_editor_absoluteX="40dp"></EditText>
-<!--        btn-->
-        <Button
-            android:id="@+id/buttonSend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/colorRed"
-            android:text="@string/submitReport"
-            android:textAllCaps="false"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/selectLocationTextView">
+            <!--        2-->
+            <TextView
+                android:id="@+id/typeReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:text="نوع البلاغ : *"
+                android:textColor="@color/colorFor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/inputNameCity"></TextView>
 
-        </Button>
+            <Spinner
+                android:id="@+id/inputNameReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custome_input"
+                android:gravity="right"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/colorFor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/nameDepartment" />
 
-        <ImageView
-            android:id="@+id/addImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="right"
-            android:background="@drawable/ic_perm_media_black"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputDescReport"/>
-        <TextView
-            android:id="@+id/addImageText"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintTop_toBottomOf="@+id/inputDescReport"
-            app:layout_constraintRight_toLeftOf="@+id/addImage"
-            android:textColor="@color/colorFor"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="اضافة صورة"/>
+            <TextView
+                android:id="@+id/nameCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:text="المحافظة : *"
+                android:textColor="@color/colorFor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/inputNameReport"
+                tools:layout_editor_absoluteX="40dp" />
 
-        <ImageView
-            android:id="@+id/selectLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="right"
-            android:background="@drawable/ic_add_location_black"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addImage"/>
-        <TextView
-            android:id="@+id/selectLocationTextView"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintTop_toBottomOf="@+id/addImageText"
-            app:layout_constraintRight_toLeftOf="@+id/selectLocation"
-            android:textColor="@color/colorFor"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="تحديد موقع"/>
+            <Spinner
+                android:id="@+id/inputNameCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custome_input"
+                android:gravity="right"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/colorFor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/nameCity" />
+
+            <EditText
+                android:id="@+id/inputTypeReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custome_input"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/colorFor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/typeReport"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+            <!--        3-->
+            <TextView
+                android:id="@+id/descReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:gravity="right"
+                android:text="وصف البلاغ :"
+                android:textColor="@color/colorFor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/inputTypeReport"></TextView>
+
+            <EditText
+                android:id="@+id/inputDescReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custome_input"
+                android:gravity="right"
+                android:hint="اوصف الحدث "
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="60dp"
+                android:textColorHint="@color/colorFor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/descReport"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"></EditText>
+            <!--        btn-->
+
+            <Button
+                android:id="@+id/buttonSend"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/colorRed"
+                android:text="@string/submitReport"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectLocationTextView"
+                tools:layout_editor_absoluteX="30dp">
+
+            </Button>
+
+            <ImageView
+                android:id="@+id/addImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_perm_media_black"
+                android:gravity="right"
+                app:layout_constraintBottom_toBottomOf="@+id/addImageText"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addImageText" />
+
+            <TextView
+                android:id="@+id/addImageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="اضافة صورة"
+                android:textColor="@color/colorFor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@+id/addImage"
+                app:layout_constraintTop_toBottomOf="@+id/inputDescReport" />
+
+            <ImageView
+                android:id="@+id/selectLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:background="@drawable/ic_add_location_black"
+                android:gravity="right"
+                app:layout_constraintBottom_toBottomOf="@+id/selectLocationTextView"
+                app:layout_constraintEnd_toStartOf="@+id/addImageText"
+                app:layout_constraintTop_toTopOf="@+id/selectLocationTextView"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <TextView
+                android:id="@+id/selectLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="88dp"
+                android:layout_marginRight="20dp"
+                android:text="تحديد موقع"
+                android:textColor="@color/colorFor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/addImageText"
+                app:layout_constraintRight_toLeftOf="@+id/selectLocation"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
