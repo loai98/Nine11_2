@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Nine11</string>
     <string name="tag_line">911</string>
+    <string name="welcome">اهلا بك في تطبيق بلاغاتي</string>
     <!--sign in/up-->
     <string name="login">تسجيل الدخول</string>
     <string name="register">انشاء الحساب</string>
     <string name="forget_pass">هل نسيت كلمة المرور؟</string>
     <string name="createAcc">إنشاء حساب</string>
+    <string name="Remember_me"> تذكرني</string>
+
 
     <!--    dash-->
     <string name="hello_user">اهلا بك</string>
@@ -19,6 +22,8 @@
 
     <string name="titleReport">تفاصيل البلاغ </string>
     <string name="submitReport">إرسال البلاغ </string>
+    <string name="delete">حذف البلاغ </string>
+    <string name="loc">مكان البلاغ </string>
 
 
     <string-array name="spinner_city_item">

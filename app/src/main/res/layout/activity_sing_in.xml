@@ -158,19 +158,47 @@
             ></View>
 
 
+        <CheckBox
+            android:id="@+id/login_chekRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorRed"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonLogin"
+            app:layout_constraintEnd_toEndOf="@+id/viewDivider2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/viewDivider2"
+            app:layout_constraintTop_toBottomOf="@id/viewDivider2"
+            app:layout_constraintVertical_bias="0.0"></CheckBox>
+
+        <TextView
+            android:id="@+id/TextRemember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Remember_me"
+            android:textSize="20sp"
+            android:textColor="@color/colorRed"
+            app:layout_constraintBottom_toBottomOf="@+id/login_chekRemember"
+            app:layout_constraintEnd_toStartOf="@+id/login_chekRemember"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/viewDivider2"
+            app:layout_constraintTop_toBottomOf="@+id/inputPass"
+            app:layout_constraintVertical_bias="0.656"></TextView>
+
         <Button
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="68dp"
             android:backgroundTint="@color/colorRed"
             android:text="@string/login"
             android:textAllCaps="false"
             android:textSize="13sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/viewDivider2">
+            app:layout_constraintTop_toBottomOf="@id/viewDivider2"
+            tools:layout_editor_absoluteX="30dp">
 
         </Button>
 
@@ -204,6 +232,8 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
         </Button>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

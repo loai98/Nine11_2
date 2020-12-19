@@ -66,18 +66,18 @@
             app:layout_constraintVertical_bias="0.0"
             app:tint="@color/white"></ImageView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/white_rec_back"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageMenu">
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:background="@drawable/white_rec_back"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/imageMenu">-->
+<!--        </LinearLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -221,6 +221,44 @@
                 tools:ignore="Autofill"
                 tools:layout_editor_absoluteX="40dp" />
             <!--        3-->
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:gravity="right"
+                android:text="رقم الهاتف :"
+                android:textColor="@color/colorFor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/inputTypeReport"></TextView>
+
+            <EditText
+                android:id="@+id/inputPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custome_input"
+                android:gravity="right"
+                android:hint="0780-"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/colorFor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumber"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"></EditText>
+            <!--        btn-->
+            <!--        4-->
             <TextView
                 android:id="@+id/descReport"
                 android:layout_width="match_parent"
@@ -233,7 +271,7 @@
                 android:textColor="@color/colorFor"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@+id/inputTypeReport"></TextView>
+                app:layout_constraintTop_toTopOf="@+id/inputPhoneNumber"></TextView>
 
             <EditText
                 android:id="@+id/inputDescReport"
@@ -307,14 +345,16 @@
                 android:gravity="right"
                 app:layout_constraintBottom_toBottomOf="@+id/selectLocationTextView"
                 app:layout_constraintEnd_toStartOf="@+id/addImageText"
+                app:layout_constraintHorizontal_bias="0.936"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/selectLocationTextView"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/selectLocationTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="88dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginRight="20dp"
                 android:text="تحديد موقع"
                 android:textColor="@color/colorFor"
@@ -322,7 +362,9 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/addImageText"
                 app:layout_constraintRight_toLeftOf="@+id/selectLocation"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputDescReport"
+                app:layout_constraintVertical_bias="1.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

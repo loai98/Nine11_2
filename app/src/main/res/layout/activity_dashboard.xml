@@ -60,44 +60,44 @@
             app:layout_constraintVertical_bias="0.625"
             app:tint="@color/white"></ImageView>
         
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/white_rec_back"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageMenu">
-            
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:hint="@string/search_elem"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/colorFor"
-                android:textSize="16sp"
-                android:importantForAutofill="no">
-            </EditText>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:background="@drawable/white_rec_back"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/imageMenu">-->
+<!--            -->
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@null"-->
+<!--                android:hint="@string/search_elem"-->
+<!--                android:imeOptions="actionSearch"-->
+<!--                android:inputType="text"-->
+<!--                android:paddingStart="15dp"-->
+<!--                android:paddingEnd="15dp"-->
+<!--                android:textColor="@color/colorFor"-->
+<!--                android:textSize="16sp"-->
+<!--                android:importantForAutofill="no">-->
+<!--            </EditText>-->
 
-            <ImageView
+<!--            <ImageView-->
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/search_icon_back"
-                android:contentDescription="@string/app_name"
-                android:padding="6dp"
-                android:src="@drawable/ic_baseline_search"
-                app:tint="@color/colorFor">
-            </ImageView>
-        </LinearLayout>
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@drawable/search_icon_back"-->
+<!--                android:contentDescription="@string/app_name"-->
+<!--                android:padding="6dp"-->
+<!--                android:src="@drawable/ic_baseline_search"-->
+<!--                app:tint="@color/colorFor">-->
+<!--            </ImageView>-->
+<!--        </LinearLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,7 +123,7 @@
                 android:background="@drawable/white_rec_back"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_margin="20dp"
                 app:layout_constraintDimensionRatio="H1:1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +158,7 @@
                 android:background="@drawable/white_rec_back"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_margin="20dp"
                 app:layout_constraintDimensionRatio="H1:1"
                 app:layout_constraintEnd_toStartOf="@+id/layout1"
@@ -194,7 +194,7 @@
                 android:background="@drawable/white_rec_back"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:layout_margin="20dp"
                 app:layout_constraintDimensionRatio="H1:1"
                 app:layout_constraintEnd_toStartOf="@+id/layout2"

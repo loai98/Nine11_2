@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFor"
+    tools:context=".ReportDetails">
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/donationDetails_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="28sp"
+            android:layout_toStartOf="@id/donationDetails_date"
+            android:textStyle="bold"
+            android:text="test"
+            android:textColor="@color/colorThre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/donationDetails_description"
+            android:layout_below="@+id/donationDetails_title"
+            android:layout_alignParentStart="true"
+            android:layout_margin="15dp"
+            android:textSize="23sp"
+            android:text="test"
+            android:textColor="@color/colorThre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/donationDetails_image"
+            android:layout_margin="15dp"
+            android:layout_below="@id/donationDetails_description"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:src="@drawable/white_rec_back"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/donationDetails_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/donationDetails_description"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-6dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/colorRed"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="30dp">
+
+        </Button>
+        <Button
+            android:id="@+id/btnLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDelete"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/colorThre"
+            android:textColor="@color/colorFor"
+            android:text="@string/loc"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="30dp">
+
+        </Button>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
