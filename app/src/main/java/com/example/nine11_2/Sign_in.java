@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.nine11_2.Model.Common;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,10 +21,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
+import io.paperdb.Paper;
+
 public class Sign_in extends AppCompatActivity {
 
     DatabaseReference database;
 
+    CheckBox checkBox;
      Button signUpButton , signInButton;
 
      EditText SSNEditText, passwordEditText;
@@ -34,6 +39,7 @@ public class Sign_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_in);
 
+        checkBox=findViewById(R.id.login_chekRemember);
         signUpButton =findViewById(R.id.buttonCreateAcc);
         signInButton=findViewById(R.id.buttonLogin);
         SSNEditText=findViewById(R.id.inputIdNum);
@@ -89,8 +95,8 @@ public class Sign_in extends AppCompatActivity {
 
                     if(user.getPassword().equalsIgnoreCase(passsword))
                     {
-                        //Toast.makeText(Sign_in.this, "Log in succesfull", Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(Sign_in.this, "To "+user.getFullName()+"Activity", Toast.LENGTH_SHORT).show();
+                        if(checkBox.isChecked())
+                            Paper.book().write(Common.USER_KEY,User.SSN);
                         Intent intent=new Intent(Sign_in.this, Dashboard.class);
                         startActivity(intent);
                         finish();

@@ -243,7 +243,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custome_input"
                 android:gravity="right"
-                android:hint="0780-"
+                android:hint="رقم الهاتف"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:paddingStart="60dp"

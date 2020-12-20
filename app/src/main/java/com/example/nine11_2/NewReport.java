@@ -44,7 +44,7 @@ public class NewReport extends AppCompatActivity {
     DatabaseReference databaseReference;
     Button senButton ;
     ImageView addImageBtn ,selectLocationBtn;
-    EditText typeEditText , discreptionEditText;
+    EditText typeEditText , discreptionEditText , phoneNumberEditText;
     String department =null , city=null;
     Complaint complaint;
     int IMAGE_REQUEST_CODE = 101 , LOCATION_REQUEST_CODE = 201;;
@@ -64,6 +64,7 @@ public class NewReport extends AppCompatActivity {
         senButton=findViewById(R.id.buttonSend);
         typeEditText=findViewById(R.id.inputTypeReport);
         discreptionEditText=findViewById(R.id.inputDescReport);
+        phoneNumberEditText=findViewById(R.id.inputPhoneNumber);
         addImageBtn=findViewById(R.id.addImage);
         textAddImage=findViewById(R.id.addImageText);
         selectLocationBtn =findViewById(R.id.selectLocation);
@@ -174,6 +175,7 @@ public class NewReport extends AppCompatActivity {
                 Select_location();
             }
         });
+        phoneNumberEditText.setText(User.phoneNumber);
 
 
 

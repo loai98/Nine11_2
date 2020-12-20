@@ -5,7 +5,10 @@ public class Complaint {
     User user ;
     Address address ;
 
-    public Complaint(String department, String type, String discreption ,String city, String image  , String date , Address address) {
+    public Complaint() {
+    }
+
+    public Complaint(String department, String type, String discreption , String city, String image  , String date , Address address) {
         this.department = department;
         this.type = type;
         this.discreption = discreption;
@@ -14,6 +17,7 @@ public class Complaint {
         this.date = date;
         this.address =address;
     }
+
 
     public String getImage() {
         return image;
