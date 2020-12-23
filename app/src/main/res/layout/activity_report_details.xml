@@ -17,21 +17,24 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/donationDetails_title"
+            android:id="@+id/reportDetails_title"
             android:layout_width="252dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_toStartOf="@id/donationDetails_date"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
             android:text="تفاصيل"
             android:textColor="@color/colorThre"
             android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/donationDetails_description"
+            android:id="@+id/reportDetails_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/donationDetails_title"
+            android:layout_below="@+id/reportDetails_title"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="19dp"
             android:layout_marginEnd="13dp"
@@ -41,7 +44,7 @@
             android:textSize="23sp" />
 
         <ImageView
-            android:id="@+id/donationDetails_image"
+            android:id="@+id/reportDetails_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -52,19 +55,21 @@
             android:src="@drawable/white_rec_back" />
 
         <TextView
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="15dp"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/donationDetails_date"
+            android:id="@+id/reportDetails_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="26dp"
+            android:text="3.3.."
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@+id/donationDetails_image"
+            android:layout_below="@+id/reportDetails_image"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="52dp"

@@ -56,8 +56,10 @@ TextView myComplaintState;
        listener=new RecylclerViewClickListener() {
            @Override
            public void onClick(View view, int position) {
-               Toast.makeText(MyReports.this,keys.get(position), Toast.LENGTH_SHORT).show();
-           }
+               Intent intent = new Intent(MyReports.this , ReportDetails.class);
+               intent.putExtra("Key", keys.get(position));
+               intent.putExtra("Position", position);
+               startActivity(intent);           }
        };
         myComplaints=new ArrayList<>();
         recyclerView=findViewById(R.id.recyclerView);
