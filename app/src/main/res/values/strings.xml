@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Nine11</string>
-    <string name="tag_line">911</string>
+    <string name="app_name">بلاغاتي</string>
+    <string name="tag_line">من أجل سلامتكم استخدموا تطبيق بلاغاتي وابلغوا عن جميع الأضرار</string>
     <string name="welcome">اهلا بك في تطبيق بلاغاتي</string>
     <!--sign in/up-->
     <string name="login">تسجيل الدخول</string>

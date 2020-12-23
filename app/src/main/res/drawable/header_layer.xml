@@ -4,7 +4,8 @@
 
     <gradient
         android:startColor="@color/colorLayerSemiDark"
-        android:centerColor="@color/colorLayerDark">
+        android:centerColor="#95000000"
+        android:endColor="@color/colorLayerSemiDark">
 
     </gradient>
 </shape>
