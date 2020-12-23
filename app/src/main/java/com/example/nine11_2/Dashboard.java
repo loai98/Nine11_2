@@ -56,7 +56,7 @@ public class Dashboard extends AppCompatActivity {
         imageMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SignOut();
+             //   SignOut();
             }
         });
     }

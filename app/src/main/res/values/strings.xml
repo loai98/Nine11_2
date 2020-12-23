@@ -28,18 +28,18 @@
 
     <string-array name="spinner_city_item">
         <item>-المحافظة-</item>
-           <item>اربد</item>
-           <item>جرش</item>
-           <item>عجلون</item>
-           <item>المفرق</item>
-           <item>عمان</item>
-           <item>الزرقاء</item>
-           <item>البلقاء</item>
-           <item>مادبا</item>
-           <item>معان</item>
-           <item>الكرك</item>
-           <item>الطفيلة</item>
-           <item>العقبة</item>
+        <item>اربد</item>
+        <item>جرش</item>
+        <item>عجلون</item>
+        <item>المفرق</item>
+        <item>عمان</item>
+        <item>الزرقاء</item>
+        <item>البلقاء</item>
+        <item>مادبا</item>
+        <item>معان</item>
+        <item>الكرك</item>
+        <item>الطفيلة</item>
+        <item>العقبة</item>
     </string-array>
 
     <string-array name="spinner_type_item">
@@ -56,5 +56,6 @@
         <item>وزارة الاشغال</item>
     </string-array>
     <string name="title_activity_select_location">Map</string>
+    <string name="title_activity_report_location">Map</string>
 
 </resources>

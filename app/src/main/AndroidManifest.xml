@@ -31,14 +31,18 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".ReportLocation"
+            android:label="@string/title_activity_report_location"></activity>
+        <activity
             android:name=".SelectLocation"
-            android:label="@string/title_activity_select_location"></activity>
+            android:label="@string/title_activity_select_location" />
         <activity android:name=".Sign_up" />
+        <activity android:name=".ReportDetails" />
         <activity android:name=".Sign_in" />
         <activity android:name=".NewReport" />
         <activity android:name=".Dashboard" />
-        <activity android:name=".MyReports"/>
-        <activity android:name=".ReportDetails"/>
+        <activity android:name=".MyReports" />
+        <activity android:name=".ReportDetails" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -76,6 +76,16 @@ public class ReportDetails extends AppCompatActivity {
         });
 
 
+        locationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ReportDetails.this , ReportLocation.class);
+                intent.putExtra("Position" , position);
+                startActivity(intent);
+            }
+        });
+
+
 
 
 

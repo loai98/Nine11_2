@@ -276,21 +276,22 @@
             <EditText
                 android:id="@+id/inputDescReport"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custome_input"
                 android:gravity="right"
                 android:hint="اوصف الحدث "
                 android:imeOptions="actionNext"
-                android:inputType="text"
-                android:paddingStart="60dp"
-                android:paddingLeft="60dp"
-                android:paddingTop="10dp"
-                android:paddingEnd="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="60dp"
+                android:inputType="textMultiLine"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
                 android:textColorHint="@color/colorFor"
                 android:textSize="15sp"
+
                 app:layout_constraintTop_toBottomOf="@id/descReport"
                 tools:ignore="Autofill"
                 tools:layout_editor_absoluteX="40dp"></EditText>
@@ -365,6 +366,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/inputDescReport"
                 app:layout_constraintVertical_bias="1.0" />
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

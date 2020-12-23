@@ -1,4 +1,4 @@
-package com.example.nine11_2.Model;
+package com.example.nine11_2;
 
 public class Common {
 
