@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFor"
+    android:background="@color/white"
     tools:context=".ReportDetails">
 
 
@@ -13,8 +13,12 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:padding="2dp"
+        android:background="@drawable/white_rec_back"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
+
 
         <TextView
             android:id="@+id/reportDetails_title"
@@ -24,11 +28,24 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="20dp"
             android:text="تفاصيل"
-            android:textColor="@color/colorThre"
+            android:textColor="@color/colorFor"
             android:textSize="28sp"
             android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewDivider1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorFor"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/reportDetails_title"
+            android:layout_marginRight="10dp"></View>
+
+
 
         <TextView
             android:id="@+id/reportDetails_description"
@@ -37,10 +54,11 @@
             android:layout_below="@+id/reportDetails_title"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="19dp"
-            android:layout_marginEnd="13dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
             android:layout_marginBottom="15dp"
             android:text="وصف"
-            android:textColor="@color/colorThre"
+            android:textColor="@color/colorFor"
             android:textSize="23sp" />
 
         <ImageView
@@ -60,10 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="37dp"
             android:text="3.3.."
-            android:textColor="@color/white" />
+            android:textColor="@color/colorFor" />
 
         <Button
             android:id="@+id/btnDelete"
@@ -72,7 +90,7 @@
             android:layout_below="@+id/reportDetails_image"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:drawableLeft="@drawable/ic_baseline_delete_24"
@@ -96,8 +114,10 @@
             android:layout_marginTop="2dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/colorThre"
-            android:textColor="@color/colorFor"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorFor"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
             android:text="@string/loc"
             android:textAllCaps="false"
             android:textSize="15sp"

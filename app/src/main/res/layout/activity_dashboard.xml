@@ -58,6 +58,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_hello_dash"
             app:layout_constraintVertical_bias="0.625"
+            app:menu="@menu/menu"
             app:tint="@color/white"></ImageView>
         
 <!--        <LinearLayout-->

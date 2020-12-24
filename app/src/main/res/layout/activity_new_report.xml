@@ -39,14 +39,14 @@
             android:id="@+id/titleReport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="11dp"
             android:gravity="center"
             android:text="@string/titleReport"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/arrowBack"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toEndOf="@+id/imageMenu"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_goneMarginTop="15dp" />
@@ -64,7 +64,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
+            app:menu="@menu/menu"
             app:tint="@color/white"></ImageView>
+
+
 
 <!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->
@@ -306,6 +309,7 @@
                 android:text="@string/submitReport"
                 android:textAlignment="center"
                 android:textAllCaps="false"
+                android:layout_marginBottom="20dp"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -42,7 +42,7 @@
         <activity android:name=".NewReport" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MyReports" />
-        <activity android:name=".ReportDetails" />
+        <activity android:name=".ReportDetails"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
