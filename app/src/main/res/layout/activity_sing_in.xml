@@ -14,16 +14,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/header1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
     </ImageView>
 
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/header_layer"
         app:layout_constraintBottom_toBottomOf="@id/imageHeader">
@@ -37,7 +37,7 @@
         android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/imageHeader"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.727">
 
@@ -65,7 +65,7 @@
         android:layout_height="1dp"
         android:layout_marginBottom="30dp"
         android:id="@+id/viewSupporter"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/imageHeader">
     </View>
 
@@ -73,8 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/sign_in_back"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter">
 
@@ -88,7 +88,6 @@
             android:textStyle="bold"
             android:textColor="@color/colorFor"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="25sp"
             app:layout_constraintTop_toTopOf="parent">
         </TextView>
@@ -104,9 +103,7 @@
             android:text="1234568789"
             android:imeOptions="actionNext"
             android:inputType="number"
-            android:paddingStart="60dp"
             android:paddingLeft="60dp"
-            android:paddingEnd="10dp"
             android:paddingRight="10dp"
             android:textColorHint="@color/colorFor"
             android:textSize="15sp"
@@ -122,7 +119,6 @@
             android:layout_height="1dp"
             android:background="@color/colorThre"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
             app:layout_constraintTop_toBottomOf="@id/inputIdNum"
             android:layout_marginRight="10dp"></View>
 
@@ -139,11 +135,9 @@
             android:textColorHint="@color/colorFor"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:paddingStart="60dp"
-            android:paddingEnd="10dp"
-            android:textSize="15sp"
             android:paddingLeft="60dp"
             android:paddingRight="10dp"
+            android:textSize="15sp"
             android:gravity="right"
             app:layout_constraintTop_toBottomOf="@id/viewDivider1"
             >
@@ -154,9 +148,9 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorThre"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             app:layout_constraintTop_toBottomOf="@id/inputPass"
             ></View>
 
@@ -170,9 +164,9 @@
             android:textColor="@color/colorRed"
             android:padding="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/buttonLogin"
-            app:layout_constraintEnd_toEndOf="@+id/viewDivider2"
+            app:layout_constraintRight_toRightOf="@+id/viewDivider2"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/viewDivider2"
+            app:layout_constraintLeft_toLeftOf="@+id/viewDivider2"
             app:layout_constraintTop_toBottomOf="@id/viewDivider2"
             app:layout_constraintVertical_bias="0.0"></CheckBox>
 
@@ -184,9 +178,9 @@
             android:textSize="20sp"
             android:textColor="@color/colorRed"
             app:layout_constraintBottom_toBottomOf="@+id/login_chekRemember"
-            app:layout_constraintEnd_toStartOf="@+id/login_chekRemember"
+            app:layout_constraintRight_toLeftOf="@+id/login_chekRemember"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/viewDivider2"
+            app:layout_constraintLeft_toLeftOf="@+id/viewDivider2"
             app:layout_constraintTop_toBottomOf="@+id/inputPass"
             app:layout_constraintVertical_bias="0.656"></TextView>
 
@@ -209,9 +203,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="7dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="13sp"
             android:textColor="@color/colorSec"
             app:layout_constraintTop_toBottomOf="@id/buttonLogin"
@@ -224,8 +218,8 @@
             android:id="@+id/buttonCreateAcc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="@color/colorFor"
             android:text="@string/createAcc"
             android:textAllCaps="false"

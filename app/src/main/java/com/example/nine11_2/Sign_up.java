@@ -109,7 +109,7 @@ public class Sign_up extends AppCompatActivity {
     private void CreatNewUser() {
 
         final ProgressDialog progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage("Waiting");
+        progressDialog.setMessage("جار التسجيل...");
         progressDialog.show();
 
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {

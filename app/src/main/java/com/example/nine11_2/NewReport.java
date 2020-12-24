@@ -43,7 +43,7 @@ public class NewReport extends AppCompatActivity {
     StorageReference storageReference;
     DatabaseReference databaseReference;
     Button senButton ;
-    ImageView addImageBtn ,selectLocationBtn;
+    ImageView addImageBtn ,selectLocationBtn ,backBtn;
     EditText typeEditText , discreptionEditText , phoneNumberEditText;
     String department =null , city=null;
     Complaint complaint;
@@ -69,6 +69,7 @@ public class NewReport extends AppCompatActivity {
         textAddImage=findViewById(R.id.addImageText);
         selectLocationBtn =findViewById(R.id.selectLocation);
         selectLocationTextView=findViewById(R.id.selectLocationTextView);
+        backBtn=findViewById(R.id.arrowBack);
 
         
         Spinner typeSpinner = findViewById(R.id.inputNameReport);
@@ -153,6 +154,8 @@ public class NewReport extends AppCompatActivity {
                 PlaceReport();
 
 
+
+
             }
         });
         
@@ -178,6 +181,13 @@ public class NewReport extends AppCompatActivity {
         phoneNumberEditText.setText(User.phoneNumber);
 
 
+       /* backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+      */
 
 
 
@@ -223,7 +233,7 @@ public class NewReport extends AppCompatActivity {
             public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
                   /*  double progress = (100 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
                     mDialog.setMessage("Uploading...  " + (int) progress + "%");*/
-                mDialog.setMessage("Please wait...");
+                mDialog.setMessage("جاري ارسال البلاغ...");
             }
         });
 
@@ -264,7 +274,8 @@ public class NewReport extends AppCompatActivity {
     private void PlaceReport() {
         complaint.setUser(new User(User.phoneNumber , User.fullName));
         final ProgressDialog progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage("Waiting");
+        progressDialog.setMessage("جاري ارسال البلاغ...");
+        progressDialog.setCancelable(false);
         progressDialog.show();
 
         databaseReference.child("Complaint").child(department).child(User.SSN).push().setValue(complaint).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -283,5 +294,9 @@ public class NewReport extends AppCompatActivity {
 
 
 
+    }
+
+    public void finhsh(View view) {
+        finish();
     }
 }

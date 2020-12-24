@@ -1,18 +1,22 @@
 package com.example.nine11_2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import io.paperdb.Paper;
 
-public class Dashboard extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
     LinearLayout newReportLinearLayout  , myReports;
     TextView userName;
     String firstName;
@@ -56,10 +60,16 @@ public class Dashboard extends AppCompatActivity {
         imageMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   SignOut();
+                PopupMenu popupMenu=new PopupMenu(Dashboard.this ,v);
+                popupMenu.setOnMenuItemClickListener(Dashboard.this);
+                popupMenu.inflate(R.menu.menu);
+                popupMenu.show();
+
             }
         });
     }
+
+
 
     private void SignOut(){
         Intent logInIntent = new Intent(Dashboard.this, Sign_in.class);
@@ -67,5 +77,12 @@ public class Dashboard extends AppCompatActivity {
         logInIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(logInIntent);
 
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        if(item.getItemId()==R.id.logOut)
+            SignOut();
+        return true;
     }
 }

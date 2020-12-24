@@ -3,6 +3,7 @@ package com.example.nine11_2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,6 +44,8 @@ DatabaseReference databaseReference;
 TextView myComplaintState;
     ArrayList<String>keys;
 
+    ImageView backBtn ;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +53,10 @@ TextView myComplaintState;
         setContentView(R.layout.activity_my_report);
 
         myComplaintState=findViewById(R.id.myComplaint_text);
+        backBtn=findViewById(R.id.imageMenu);
+
+
+
 
         databaseReference= FirebaseDatabase.getInstance().getReference("User");
 
@@ -69,6 +76,13 @@ TextView myComplaintState;
         LoadItem();
         recyclerView.setAdapter(adapter);
 
+      /*  backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });*/
+
 
     }
 
@@ -81,8 +95,8 @@ TextView myComplaintState;
 
                 for (DataSnapshot s : dataSnapshot.child(User.SSN).child("Complaint").getChildren()) {
                     Complaint complaint = s.getValue(Complaint.class);
-                    myComplaints.add(complaint);
-                    keys.add(s.getRef().getKey());
+                    myComplaints.add(0,complaint);
+                    keys.add( 0,s.getRef().getKey());
 
                     if (myComplaints.size()==0)
                         myComplaintState.setText("لا يوجد بلاغات");
@@ -103,4 +117,7 @@ TextView myComplaintState;
         });
     }
 
+    public void finish(View view) {
+        finish();
+    }
 }

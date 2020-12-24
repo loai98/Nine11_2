@@ -80,7 +80,7 @@ public class Sign_in extends AppCompatActivity {
 
 
         final ProgressDialog progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage("Waiting");
+        progressDialog.setMessage("جار تسجيل الدخول...");
         progressDialog.show();
 
         database.addListenerForSingleValueEvent(new ValueEventListener() {
