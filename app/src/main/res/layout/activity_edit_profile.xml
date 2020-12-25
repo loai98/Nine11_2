@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Edit_profile"
+    android:background="@drawable/header_layer_sign">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile "
+        android:textColor="@color/colorFor"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" الاسم "
+        android:id="@+id/et_name"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorFor">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="الهاتف"
+        android:id="@+id/et_phone"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:textColorHint="@color/colorFor"
+        android:paddingLeft="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="البريد الالكتروني "
+        android:id="@+id/oldPass"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorFor"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="البريد الالكتروني "
+        android:id="@+id/newPass"
+        android:layout_margin="4dp"
+        android:drawablePadding="7dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/colorFor"
+        />
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="حفظ التعديلات"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_up"/>
+
+</LinearLayout>

@@ -78,7 +78,6 @@ public class Sign_in extends AppCompatActivity {
 
     private void SignIn() {
 
-
         final ProgressDialog progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("جار تسجيل الدخول...");
         progressDialog.show();

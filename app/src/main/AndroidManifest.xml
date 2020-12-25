@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nine11_2">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nine11">
-
+        <activity android:name=".Edit_profile"></activity>
+        <activity android:name=".Safty_Instruction" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,7 +32,7 @@
 
         <activity
             android:name=".ReportLocation"
-            android:label="@string/title_activity_report_location"></activity>
+            android:label="@string/title_activity_report_location" />
         <activity
             android:name=".SelectLocation"
             android:label="@string/title_activity_select_location" />
@@ -42,7 +42,7 @@
         <activity android:name=".NewReport" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MyReports" />
-        <activity android:name=".ReportDetails"/>
+        <activity android:name=".ReportDetails" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

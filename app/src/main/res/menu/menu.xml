@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <item
         android:id="@+id/myReportss"
-        android:title="My Reports"/>
+        android:title=" البلاغات "
+        />
     <item
         android:id="@+id/editProfile"
-        android:title="Edit Profile"/>
+        android:title=" تعديل المعلومات  الشخصيه "
+
+        />
+
+    <item
+        android:id="@+id/setting"
+        android:title="الاعدادات "
+        />
+    <item
+        android:id="@+id/information"
+        android:title="معلومات عن التطبيق  "
+        />
+    <item
+        android:id="@+id/call"
+        android:title="التواصل  "
+        />
+    <item
+        android:id="@+id/help"
+        android:title="المساعده "
+        />
 
     <item
         android:id="@+id/logOut"
-        android:title="Sign out"/>
+        android:title="تسجيل الخروج "
+        />
+
 
 </menu>
