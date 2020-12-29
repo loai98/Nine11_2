@@ -19,8 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"
+        android:layout_margin="20dp"
         android:text="Select"
+        android:textSize="20dp"
         android:backgroundTint="@color/colorRed"
         android:textAllCaps="false" />
 
