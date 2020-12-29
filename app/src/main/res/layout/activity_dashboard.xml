@@ -168,6 +168,43 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout1">
 
+
+                <ImageView
+                    android:layout_width="102dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_baseline_create"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/newReport"
+                    android:textColor="@color/colorFor"
+                    android:textSize="25sp"
+                    android:textStyle="bold"></TextView>
+
+
+
+            </LinearLayout>
+<!--            3-->
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rec_back"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                app:layout_constraintDimensionRatio="H1:1"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout2">
+
                 <ImageView
                     android:layout_width="102dp"
                     android:layout_height="100dp"
@@ -186,42 +223,6 @@
                     android:textStyle="bold">
                 </TextView>
 
-
-            </LinearLayout>
-<!--            3-->
-            <LinearLayout
-                android:id="@+id/layout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:background="@drawable/white_rec_back"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:layout_margin="20dp"
-                app:layout_constraintDimensionRatio="H1:1"
-               app:layout_constraintRight_toRightOf="parent"
-               app:layout_constraintLeft_toLeftOf="parent"
-
-                app:layout_constraintTop_toBottomOf="@id/layout2">
-
-                <ImageView
-                    android:layout_width="102dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_baseline_safty">
-                </ImageView>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/saftyList"
-                    android:textColor="@color/colorFor"
-                    android:textSize="25sp"
-                    android:textStyle="bold">
-                </TextView>
 
 
             </LinearLayout>
@@ -247,16 +248,18 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/ic_baseline_create"></ImageView>
-
+                    android:src="@drawable/ic_baseline_safty">
+                </ImageView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/newReport"
+                    android:text="@string/saftyList"
                     android:textColor="@color/colorFor"
                     android:textSize="25sp"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold">
+                </TextView>
+
 
 
             </LinearLayout>
