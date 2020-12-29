@@ -120,7 +120,8 @@
             android:layout_marginTop="59dp"
             android:layout_marginRight="10dp"
             android:drawablePadding="7dp"
-            android:hint=" الاسم "
+            android:drawableRight="@drawable/ic_baseline_person"
+            android:hint="الاسم الكامل "
 
             android:paddingLeft="10dp"
             android:textColorHint="@color/colorFor">
@@ -128,9 +129,10 @@
         </EditText>
 
         <EditText
+            android:drawableRight="@drawable/ic_baseline_local_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="الهاتف"
+        android:hint=" رقم الهاتف"
         android:id="@+id/et_phone"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
@@ -143,11 +145,12 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="البريد الالكتروني "
+        android:hint="كلمة المرور الحالية "
         android:id="@+id/oldPass"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:drawablePadding="7dp"
+        android:drawableRight="@drawable/ic_baseline_lock"
         android:paddingLeft="10dp"
         android:textColorHint="@color/colorFor"
         android:layout_below="@+id/et_phone"
@@ -157,12 +160,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="البريد الالكتروني "
+        android:hint="كلمة المرور الجديدة "
         android:id="@+id/newPass"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:drawablePadding="7dp"
         android:paddingLeft="10dp"
+        android:drawableRight="@drawable/ic_baseline_lock"
         android:textColorHint="@color/colorFor"
         android:layout_below="@+id/oldPass"
 

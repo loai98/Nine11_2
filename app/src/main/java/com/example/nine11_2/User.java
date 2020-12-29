@@ -3,7 +3,7 @@ package com.example.nine11_2;
 public class User {
 
    public static String SSN  , phoneNumber , fullName ;
-    String password;
+   public static String password;
 
     public User(String phoneNumber, String fullName, String password) {
         this.phoneNumber = phoneNumber;

@@ -40,12 +40,14 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class NewReport extends AppCompatActivity {
+import io.paperdb.Paper;
+
+public class NewReport extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
     StorageReference storageReference;
     DatabaseReference databaseReference;
     Button senButton ;
-    ImageView addImageBtn ,selectLocationBtn ,backBtn;
+    ImageView addImageBtn ,selectLocationBtn ,backBtn  , imageMenu;
     EditText typeEditText , discreptionEditText , phoneNumberEditText;
     String department =null , city=null;
     Complaint complaint;
@@ -63,6 +65,7 @@ public class NewReport extends AppCompatActivity {
         databaseReference= FirebaseDatabase.getInstance().getReference();
         storageReference = FirebaseStorage.getInstance().getReference();
 
+        imageMenu=findViewById(R.id.imageMenu);
         senButton=findViewById(R.id.buttonSend);
         typeEditText=findViewById(R.id.inputTypeReport);
         discreptionEditText=findViewById(R.id.inputDescReport);
@@ -193,6 +196,15 @@ public class NewReport extends AppCompatActivity {
 
 
 
+        imageMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(NewReport.this, v);
+                popupMenu.setOnMenuItemClickListener(NewReport.this);
+                popupMenu.inflate(R.menu.menu);
+                popupMenu.show();
+            }
+        });
 
     }
 
@@ -299,4 +311,36 @@ public class NewReport extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+
+        if (item.getItemId() == R.id.logOut) {
+            SignOut();
+            return true;
+        }
+
+        if (item.getItemId() == R.id.myReportss) {
+            startActivity(new Intent(NewReport.this , MyReports.class));
+            return true;
+        }
+        if (item.getItemId() == R.id.editProfile) {
+            startActivity(new Intent(NewReport.this , Edit_profile.class));
+            return true;
+        }
+
+
+        return false;
+    }
+
+    private void SignOut() {
+
+        Intent logInIntent = new Intent(NewReport.this, Sign_in.class);
+        Paper.book().destroy();
+        logInIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(logInIntent);
+    }
+
+    public void finish(View view) {
+        finish();
+    }
 }

@@ -2,8 +2,10 @@ package com.example.nine11_2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +25,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MyReports extends AppCompatActivity {
+import io.paperdb.Paper;
+
+public class MyReports extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     @Override
     protected void onPostResume() {
@@ -44,7 +48,7 @@ DatabaseReference databaseReference;
 TextView myComplaintState;
     ArrayList<String>keys;
 
-    ImageView backBtn ;
+    ImageView backBtn , imageMenu ;
 
 
     @Override
@@ -53,7 +57,20 @@ TextView myComplaintState;
         setContentView(R.layout.activity_my_report);
 
         myComplaintState=findViewById(R.id.myComplaint_text);
-        backBtn=findViewById(R.id.imageMenu);
+        backBtn=findViewById(R.id.arrowBack);
+        imageMenu = findViewById(R.id.imageMenu);
+
+
+        imageMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(MyReports.this, v);
+                popupMenu.setOnMenuItemClickListener(MyReports.this);
+                popupMenu.inflate(R.menu.menu2);
+                popupMenu.show();
+
+            }
+        });
 
 
 
@@ -119,5 +136,27 @@ TextView myComplaintState;
 
     public void finish(View view) {
         finish();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        if (item.getItemId() == R.id.logOut) {
+            SignOut();
+            return true;
+        }
+
+        if (item.getItemId() == R.id.editProfile) {
+            startActivity(new Intent(MyReports.this , Edit_profile.class));
+            return true;
+        }
+        return  false;
+    }
+
+    private void SignOut() {
+
+        Intent logInIntent = new Intent(MyReports.this, Sign_in.class);
+        Paper.book().destroy();
+        logInIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(logInIntent);
     }
 }

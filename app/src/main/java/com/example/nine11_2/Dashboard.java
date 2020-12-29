@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -92,6 +93,15 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
     public boolean onMenuItemClick(MenuItem item) {
         if (item.getItemId() == R.id.logOut) {
             SignOut();
+            return true;
+        }
+
+        if (item.getItemId() == R.id.myReportss) {
+            startActivity(new Intent(Dashboard.this , MyReports.class));
+            return true;
+        }
+        if (item.getItemId() == R.id.editProfile) {
+            startActivity(new Intent(Dashboard.this , Edit_profile.class));
             return true;
         }
 
