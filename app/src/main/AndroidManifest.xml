@@ -11,12 +11,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/main_logo"
+        android:icon="@drawable/logrep"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nine11">
-        <activity android:name=".Edit_profile"></activity>
+        <activity android:name=".Edit_profile" />
         <activity android:name=".Safty_Instruction" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
