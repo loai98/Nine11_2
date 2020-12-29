@@ -116,9 +116,9 @@
             android:layout_height="wrap_content">
 
 
-<!--            1-->
+<!--            4-->
             <LinearLayout
-                android:id="@+id/layout1"
+                android:id="@+id/layout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -152,9 +152,9 @@
 
 
             </LinearLayout>
-<!--            2-->
+<!--            1-->
             <LinearLayout
-                android:id="@+id/layout2"
+                android:id="@+id/layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -166,7 +166,7 @@
                 app:layout_constraintDimensionRatio="H1:1"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout1">
+                app:layout_constraintTop_toBottomOf="@id/layout4">
 
 
                 <ImageView
@@ -189,9 +189,9 @@
 
 
             </LinearLayout>
-<!--            3-->
+<!--            2-->
             <LinearLayout
-                android:id="@+id/layout3"
+                android:id="@+id/layout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -203,7 +203,10 @@
                 app:layout_constraintDimensionRatio="H1:1"
                app:layout_constraintRight_toRightOf="parent"
                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout2">
+
+                app:layout_constraintTop_toBottomOf="@id/layout1">
+
+
 
                 <ImageView
                     android:layout_width="102dp"
@@ -227,9 +230,9 @@
 
             </LinearLayout>
 
-            <!--            4-->
+<!--            3-->
             <LinearLayout
-                android:id="@+id/layout4"
+                android:id="@+id/layout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -240,7 +243,7 @@
                 app:layout_constraintDimensionRatio="H1:1"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout3">
+                app:layout_constraintTop_toBottomOf="@+id/layout2">
 
                 <ImageView
                     android:layout_width="102dp"
