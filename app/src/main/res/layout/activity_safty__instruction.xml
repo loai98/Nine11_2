@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top"
-    tools:context=".Edit_profile"
+    tools:context=".Safty_Instruction"
     android:background="@color/white">
 
 
@@ -24,7 +24,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="30dp"
             android:contentDescription="@string/app_name"
-            android:onClick="finhsh"
+            android:onClick="Finhsh"
             android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.82"
