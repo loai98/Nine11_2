@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nine11">
+        <activity android:name=".about_us"></activity>
         <activity android:name=".Edit_profile" />
         <activity android:name=".Safty_Instruction" />
         <!--

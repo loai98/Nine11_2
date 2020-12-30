@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
             android:gravity="center"
-            android:text="الصفحة الشخصية"
+            android:text=" عن التطبيق"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -64,38 +64,17 @@
             app:layout_constraintVertical_bias="0.0"
             app:menu="@menu/menu"
             app:tint="@color/white"></ImageView>
-
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="15dp"-->
-        <!--            android:layout_marginTop="15dp"-->
-        <!--            android:layout_marginRight="15dp"-->
-        <!--            android:layout_marginBottom="15dp"-->
-        <!--            android:background="@drawable/white_rec_back"-->
-        <!--            android:orientation="horizontal"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/imageMenu">-->
-        <!--        </LinearLayout>-->
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <RelativeLayout
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:padding="2dp"
         android:background="@drawable/white_rec_back"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"><![CDATA[
-
-
-        />
-
-
-
-        ]]>
+        android:padding="2dp">
 
         <TextView
             android:id="@+id/viw"
@@ -105,86 +84,170 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="30dp"
             android:gravity="center_horizontal"
-            android:text="معلوماتي"
+            android:text="بلاغاتي "
             android:textAlignment="center"
             android:textColor="@color/colorFor"
             android:textSize="40sp" />
 
-        <EditText
 
-            android:id="@+id/et_name"
+        <View
+            android:id="@+id/viewDivider1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="3dp"
             android:layout_below="@+id/viw"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="59dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="10dp"
-            android:drawablePadding="7dp"
-            android:drawableRight="@drawable/ic_baseline_person"
-            android:hint="الاسم الكامل "
+            android:background="@color/colorFor" />
 
-            android:paddingLeft="10dp"
-            android:textColorHint="@color/colorFor">
-
-        </EditText>
-
-        <EditText
-            android:drawableRight="@drawable/ic_baseline_local_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=" رقم الهاتف"
-        android:id="@+id/et_phone"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:drawablePadding="7dp"
-        android:textColorHint="@color/colorFor"
-        android:paddingLeft="10dp"
-        android:layout_below="@+id/et_name"
-
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="كلمة المرور الحالية "
-        android:id="@+id/oldPass"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:drawablePadding="7dp"
-        android:drawableRight="@drawable/ic_baseline_lock"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/colorFor"
-        android:layout_below="@+id/et_phone"
-
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="كلمة المرور الجديدة "
-        android:id="@+id/newPass"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:drawablePadding="7dp"
-        android:paddingLeft="10dp"
-        android:drawableRight="@drawable/ic_baseline_lock"
-        android:textColorHint="@color/colorFor"
-        android:layout_below="@+id/oldPass"
-
-        />
-
-
-        <Button
-            android:id="@+id/btn_up"
+        <TextView
+            android:id="@+id/viw2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/newPass"
-            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/viewDivider1"
+            android:layout_alignBottom="@+id/viewDivider1"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="@color/colorFor"
-            android:text="حفظ التعديلات"
-            android:textColor="@android:color/white"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw2"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+        <TextView
+            android:id="@+id/viw4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDivider2"
+            android:layout_alignBottom="@+id/viewDivider2"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw4"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider3"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+
+        <TextView
+            android:id="@+id/viw6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDivider3"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw6"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+
+
     </RelativeLayout>
 </LinearLayout>
