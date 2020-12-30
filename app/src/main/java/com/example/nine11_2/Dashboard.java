@@ -119,6 +119,11 @@ public class Dashboard extends AppCompatActivity implements PopupMenu.OnMenuItem
             return true;
         }
 
+        if (item.getItemId() == R.id.information) {
+            startActivity(new Intent(Dashboard.this , about_us.class));
+            return true;
+        }
+
         if (item.getItemId() == R.id.myReportss) {
             startActivity(new Intent(Dashboard.this , MyReports.class));
             return true;

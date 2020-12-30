@@ -319,6 +319,11 @@ public class NewReport extends AppCompatActivity implements PopupMenu.OnMenuItem
             return true;
         }
 
+        if (item.getItemId() == R.id.information) {
+            startActivity(new Intent(NewReport.this , about_us.class));
+            return true;
+        }
+
         if (item.getItemId() == R.id.myReportss) {
             startActivity(new Intent(NewReport.this , MyReports.class));
             return true;

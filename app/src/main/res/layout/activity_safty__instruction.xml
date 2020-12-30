@@ -8,15 +8,12 @@
     tools:context=".Safty_Instruction"
     android:background="@color/white">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/dashHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/header_dash"
         android:padding="10dp">
-
-
         <ImageView
             android:id="@+id/arrowBack"
             android:layout_width="30dp"
@@ -113,9 +110,6 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-
-
-
     </RelativeLayout>
     <RelativeLayout
         android:layout_marginTop="10dp"
@@ -141,8 +135,6 @@
             android:textColor="@color/colorFor"
             android:textSize="14sp"
             android:textStyle="bold" />
-
-
 
 
     </RelativeLayout>

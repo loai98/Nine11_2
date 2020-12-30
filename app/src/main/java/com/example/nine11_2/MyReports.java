@@ -144,7 +144,10 @@ TextView myComplaintState;
             SignOut();
             return true;
         }
-
+        if (item.getItemId() == R.id.information) {
+            startActivity(new Intent(MyReports.this , about_us.class));
+            return true;
+        }
         if (item.getItemId() == R.id.editProfile) {
             startActivity(new Intent(MyReports.this , Edit_profile.class));
             return true;

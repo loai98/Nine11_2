@@ -123,6 +123,11 @@ public class Edit_profile extends AppCompatActivity implements PopupMenu.OnMenuI
             return true;
         }
 
+        if (item.getItemId() == R.id.information) {
+            startActivity(new Intent(Edit_profile.this , about_us.class));
+            return true;
+        }
+
         if (item.getItemId() == R.id.myReportss) {
             startActivity(new Intent(Edit_profile.this , MyReports.class));
             return true;
