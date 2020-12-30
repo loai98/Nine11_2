@@ -1,10 +1,12 @@
 package com.example.nine11_2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.solver.widgets.Helper;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +33,7 @@ public class Edit_profile extends AppCompatActivity implements PopupMenu.OnMenuI
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_about_us);
+            setContentView(R.layout.activity_edit_profile);
 
             setTitle("Edit Profile Information");
 
