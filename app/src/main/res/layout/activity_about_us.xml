@@ -1,0 +1,253 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".about_us"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_dash"
+        android:padding="10dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="finhsh"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/titleReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:text=" عن التطبيق"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toRightOf="@+id/arrowBack"
+            app:layout_constraintRight_toLeftOf="@+id/imageMenu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="15dp" />
+
+        <ImageView
+            android:id="@+id/imageMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:menu="@menu/menu"
+            app:tint="@color/white"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/white_rec_back"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/viw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="بلاغاتي "
+            android:textAlignment="center"
+            android:textColor="@color/colorFor"
+            android:textSize="40sp" />
+
+
+        <View
+            android:id="@+id/viewDivider1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/viw"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorFor" />
+
+        <TextView
+            android:id="@+id/viw2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDivider1"
+            android:layout_alignBottom="@+id/viewDivider1"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw2"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+        <TextView
+            android:id="@+id/viw4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDivider2"
+            android:layout_alignBottom="@+id/viewDivider2"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw4"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider3"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+
+        <TextView
+            android:id="@+id/viw6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewDivider3"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-41dp"
+            android:gravity="right"
+            android:text="عن التطبيق "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/viw7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viw6"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="وصف "
+            android:textColor="@color/colorFor"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/viewDivider4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/viw7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorFor" />
+
+
+
+    </RelativeLayout>
+</LinearLayout>
